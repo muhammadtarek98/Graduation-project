@@ -11,6 +11,6 @@ we diagnosis 3 type of injuries :
 
 3-meniscus
 
-Each type of injury is binary classification 
+Each type of injuries is binary classification
 
 we build three models with the same architecture but different in the labels 
