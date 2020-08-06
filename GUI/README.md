@@ -1,2 +1,3 @@
-# MRI
-mri scanner
+# some screen shoots from the application
+
+
