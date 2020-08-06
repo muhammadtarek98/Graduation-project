@@ -28,15 +28,25 @@ Done by:
 Each type of injuries is binary classification
 
 we build three models with the same architecture but different in the labels 
+
 **this the results after training procedure:**
 
 
 ![alt text](https://github.com/muhammadtarek98/Graduation-project/blob/master/training%20results/ACL%20train%20and%20validation%20loss.png)
+
 ![alt text](https://github.com/muhammadtarek98/Graduation-project/blob/master/training%20results/abnormal%20training%20accuracy.png)
+
 ![alt text](https://github.com/muhammadtarek98/Graduation-project/blob/master/training%20results/abnormal%20training%20loss.png)
+
 ![alt text](https://github.com/muhammadtarek98/Graduation-project/blob/master/training%20results/abnormal%20validation%20accuracy.png)
+
 ![alt text](https://github.com/muhammadtarek98/Graduation-project/blob/master/training%20results/abnormal%20validation%20loss.png)
+
 ![alt text](https://github.com/muhammadtarek98/Graduation-project/blob/master/training%20results/meniscus%20training%20accuracy.png)
+
 ![alt text](https://github.com/muhammadtarek98/Graduation-project/blob/master/training%20results/meniscus%20training%20loss.png)
+
 ![alt text](https://github.com/muhammadtarek98/Graduation-project/blob/master/training%20results/meniscus%20validation%20accuracy.png)
+
 ![alt text](https://github.com/muhammadtarek98/Graduation-project/blob/master/training%20results/meniscus%20validation%20loss.png)
+
