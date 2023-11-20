@@ -9,7 +9,7 @@ Done by:
 
 ***Mohammed Adry Ahmed (Deep learning enginnering)***
 
-***Mohammed Abd-Elnaby Abd-Elwahab (system analyst)***
+***Mohammed Abd-Elnaby Abd-Elwahab (system analysis)***
 
 ***Mohammed Mustafa Megahd El-Ewasy (desktop application developer)***
 
