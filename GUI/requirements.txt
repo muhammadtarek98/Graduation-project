@@ -18,7 +18,7 @@ opencv-python==4.2.0.34
 packaging==20.4
 path==13.1.0
 path.py==12.4.0
-Pillow==7.1.2
+Pillow==10.2.0
 pluggy==0.13.1
 protobuf==3.12.2
 py==1.8.2
