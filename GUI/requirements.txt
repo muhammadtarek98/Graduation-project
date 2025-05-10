@@ -18,10 +18,10 @@ opencv-python==4.2.0.34
 packaging==20.4
 path==13.1.0
 path.py==12.4.0
-Pillow==7.1.2
+Pillow==9.0.1
 pluggy==0.13.1
 protobuf==3.12.2
-py==1.8.2
+py==1.10.0
 pyparsing==2.4.7
 PyQt5==5.15.0
 PyQt5-sip==12.8.0
