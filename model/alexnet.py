@@ -1,8 +1,5 @@
 import torch
 import torch.nn as nn
-from .utils import load_state_dict_from_url
-
-
 __all__ = ['AlexNet', 'alexnet']
 
 
@@ -49,10 +46,9 @@ class AlexNet(nn.Module):
         return x
 
 
-[docs]def alexnet(pretrained=False, progress=True, **kwargs):
+def alexnet(pretrained=False, progress=True, **kwargs):
     r"""AlexNet model architecture from the
     `"One weird trick..." <https://arxiv.org/abs/1404.5997>`_ paper.
-
     Args:
         pretrained (bool): If True, returns a model pre-trained on ImageNet
         progress (bool): If True, displays a progress bar of the download to stderr

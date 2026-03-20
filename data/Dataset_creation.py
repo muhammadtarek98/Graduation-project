@@ -35,17 +35,19 @@ from datetime import datetime
 from pathlib import Path
 from sklearn import metrics
 from torch.autograd import Variable
-
-INPUT_DIM = 224
-MAX_PIXEL_VAL = 255
-MEAN = 58.09
-STDDEV = 49.73
+from dataclasses import dataclass
+@dataclass
+class INPUT_CONFIG:
+    INPUT_DIM = 224
+    MAX_PIXEL_VAL = 255
+    MEAN = 58.09
+    STDDEV = 49.73
 
 def preprocess(series):
-        pad = int((series.shape[2] - INPUT_DIM)/2)
+        pad = int((series.shape[2] - INPUT_CONFIG.INPUT_DIM)/2)
         series = series[:,pad:-pad,pad:-pad]
-        series = (series-np.min(series))/(np.max(series)-np.min(series))*MAX_PIXEL_VAL
-        series = (series - MEAN) / STDDEV
+        series = (series-np.min(series))/(np.max(series)-np.min(series))*INPUT_CONFIG.MAX_PIXEL_VAL
+        series = (series - INPUT_CONFIG.MEAN) / INPUT_CONFIG.STDDEV
         series = np.stack((series,)*3, axis=1)
         series_float = torch.FloatTensor(series)
         return series_float
@@ -101,7 +103,6 @@ class Dataset(data.Dataset):
         vol_axial = np.load(os.path.join(self.datadir, "axial", filename))
         vol_sagit = np.load(os.path.join(self.datadir, "sagittal", filename))
         vol_coron = np.load(os.path.join(self.datadir, "coronal", filename))
-
         # axial
         vol_axial_tensor = preprocess(vol_axial)
         
@@ -117,3 +118,16 @@ class Dataset(data.Dataset):
 
     def __len__(self):
         return len(self.paths)
+
+
+def load_data(task, use_gpu):
+    train_dir = "/content/drive/My Drive/MRNet-v1.0/train"
+    valid_dir = "/content/drive/My Drive/MRNet-v1.0/valid"
+
+    train_dataset = Dataset(train_dir, task, use_gpu)
+    valid_dataset = Dataset(valid_dir, task, use_gpu)
+
+    train_loader = data.DataLoader(train_dataset, batch_size=1, num_workers=11, shuffle=True)
+    valid_loader = data.DataLoader(valid_dataset, batch_size=1, num_workers=11, shuffle=False)
+
+    return train_loader, valid_loader
