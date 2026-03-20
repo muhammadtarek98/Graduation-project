@@ -20,11 +20,11 @@ import re
 from PyQt5 import uic
 from PyQt5.QtGui import QPixmap
 
-#from GUI.main import Ui_MainWindow as main_gui
-#from GUI.dialog import Ui_Dialog as dialog_gui
-#from GUI.extract import Ui_Dialog as extract_gui
+#from application.main import Ui_MainWindow as main_gui
+#from application.dialog import Ui_Dialog as dialog_gui
+#from application.extract import Ui_Dialog as extract_gui
 
-MainUI, _ = loadUiType(r'GUI\main.ui')
+MainUI, _ = loadUiType(r'application\main.ui')
 
 class MainApp(QMainWindow, MainUI):
     
@@ -47,7 +47,7 @@ class MainApp(QMainWindow, MainUI):
         return
     
     def start_edit_dialog(self, id, name, age, blood, note):
-        self.edit_dialog = uic.loadUi(r"GUI\edit_dialog.ui")
+        self.edit_dialog = uic.loadUi(r"application\edit_dialog.ui")
         self.edit_dialog.txt_id.setPlainText(id)
         self.edit_dialog.txt_name.setPlainText(name)
         self.edit_dialog.spin_age.setValue(age)
@@ -80,7 +80,7 @@ class MainApp(QMainWindow, MainUI):
         self.edit_dialog_close()
         
     def start_dialog_extract(self, id):
-        self.extract_dialog = uic.loadUi(r'GUI\extract.ui')
+        self.extract_dialog = uic.loadUi(r'application\extract.ui')
         self.extract_dialog.bu_save.clicked.connect(lambda x:self.get_save_location(id))
         self.extract_dialog.check_video.stateChanged.connect(self.video_check_changed)
         self.extract_dialog.show()
