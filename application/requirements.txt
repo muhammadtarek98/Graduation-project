@@ -12,15 +12,15 @@ future==0.18.2
 importlib-metadata==1.6.1
 mock==4.0.2
 more-itertools==8.4.0
-mysql-connector-python==8.0.20
+mysql-connector-python==9.3.0
 numpy==1.18.5
 opencv-python==4.2.0.34
 packaging==20.4
 path==13.1.0
 path.py==12.4.0
-Pillow==7.1.2
+Pillow==10.0.1
 pluggy==0.13.1
-protobuf==3.12.2
+protobuf==4.25.8
 py==1.8.2
 pyparsing==2.4.7
 PyQt5==5.15.0
@@ -37,3 +37,4 @@ wcwidth==0.2.4
 XlsxWriter==1.2.9
 zipp==3.1.0
 zope.interface==5.1.0
+setuptools>=78.1.1 # not directly required, pinned by Snyk to avoid a vulnerability
