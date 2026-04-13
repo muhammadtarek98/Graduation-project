@@ -25,7 +25,7 @@ py==1.8.2
 pyparsing==2.4.7
 PyQt5==5.15.0
 PyQt5-sip==12.8.0
-pytest==5.4.3
+pytest==9.0.3
 pytest-shutil==1.7.0
 pytz==2020.1
 PyYAML==5.3.1
